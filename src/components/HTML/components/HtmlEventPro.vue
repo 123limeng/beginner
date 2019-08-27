@@ -96,6 +96,10 @@
           </el-table-column>
         </el-table>
       </div>
+      <div class="border-div">
+        <h4>media 事件</h4>
+        <p>由媒体触发的事件</p>
+      </div>
     </div>
   </div>
 </template>
@@ -194,6 +198,46 @@ export default {
         {
           pro: 'ondragleave',
           dec: '当元素离开有效拖放目标时运行'
+        },
+        {
+          pro: 'ondragover',
+          dec: '当元素在有效拖放目标上正在被拖动时运行'
+        },
+        {
+          pro: 'ondragstart',
+          dec: '在拖动操作开端运行的脚本'
+        },
+        {
+          pro: 'ondrop',
+          dec: '当被拖元素正在被拖放时运行的脚本'
+        },
+        {
+          pro: 'onmousedown',
+          dec: '当元素上按下鼠标按钮时触发'
+        },
+        {
+          pro: 'onmousemove',
+          dec: '当鼠标指针移动到元素上时触发'
+        },
+        {
+          pro: 'onmouseout',
+          dec: '当鼠标指针移出元素时触发'
+        },
+        {
+          pro: 'onmouseover',
+          dec: '当鼠标指针移动到元素上时触发'
+        },
+        {
+          pro: 'onmouseup',
+          dec: '当在元素上释放鼠标元素时触发'
+        },
+        {
+          pro: 'onmousewheel',
+          dec: '当鼠标滚轮正在被滚动时运行的脚本'
+        },
+        {
+          pro: 'onscoll',
+          dec: '当元素滚动条被滚动时运行的脚本'
         }
       ]
     }
