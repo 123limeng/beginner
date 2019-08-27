@@ -14,6 +14,10 @@
         <h4>html5 Audio/Video属性</h4>
         <p><strong>autoTracks：</strong>返回表示可音轨的AutuTrackList对象</p>
         <p><strong>autoPlay：</strong>设置或返回是否在加载完成后随机播放音频/视频</p>
+        <p><strong>buffered：</strong>返回音频/视频已缓冲部分的TimeRanges对象</p>
+        <p><strong>controller：</strong>返回表示音频/视频当前媒体控制器的MediaController对象</p>
+        <p><strong>controls：</strong>设置或返回音频/视频是否显示控件</p>
+        <p><strong>currentSrc：</strong>返回当前音频/视频的URL</p>
       </div>
     </div>
   </div>
