@@ -8,7 +8,7 @@
           background-color="#545c64"
           text-color="#fff"
           active-text-color="#ffd04b"
-          default-openeds="[2, 3, 4]"
+          default-openeds="[2, 3, 4, 5]"
           @select="handleSelect">
           <el-submenu index="1">
             <template slot="title">JS教程</template>
@@ -32,6 +32,10 @@
             <template slot="title">JS函数</template>
             <el-menu-item index="4-1">Js函数</el-menu-item>
           </el-submenu>
+          <el-submenu index="5">
+            <template slot="title">Js Html Dom</template>
+            <el-menu-item index="5-1">Dom方法</el-menu-item>
+          </el-submenu>
         </el-menu>
       </el-col>
       <el-col :span="20">
@@ -47,10 +51,11 @@ import JsFormApi from './components/Js_FormApi'
 import JsObjectMethods from './components/Js_Object_methods'
 import JsObjPrototype from './components/Js_Obj_Prototype'
 import JsMethods from './components/Js_Methods'
+import JsHtmlDom from './components/Js_Html_Dom'
 export default {
   name: 'HTML',
   components: {
-    JsOutput, JsForm, JsFormApi, JsObjectMethods, JsObjPrototype, JsMethods
+    JsOutput, JsForm, JsFormApi, JsObjectMethods, JsObjPrototype, JsMethods, JsHtmlDom
   },
   data () {
     return {
@@ -76,6 +81,9 @@ export default {
           break
         case '4-1':
           this.currentComponent = 'JsMethods'
+          break
+        case '5-1':
+          this.currentComponent = 'JsHtmlDom'
           break
         default:
           break
