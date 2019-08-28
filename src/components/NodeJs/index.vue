@@ -1,8 +1,8 @@
 <template>
-  <div>这是XML</div>
+  <div>这是NodeJs</div>
 </template>
 <script>
 export default {
-  name: 'XML'
+  name: 'MyNodeJs'
 }
 </script>
