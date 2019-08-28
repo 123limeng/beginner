@@ -11,8 +11,8 @@
       <el-menu-item index="1">HTML</el-menu-item>
       <el-menu-item index="2">BrowerSider</el-menu-item>
       <el-menu-item index="3">ServerSider</el-menu-item>
-      <el-menu-item index="4">Programming</el-menu-item>
-      <el-menu-item index="5">XML</el-menu-item>
+      <el-menu-item index="4">NodeJs</el-menu-item>
+      <el-menu-item index="5">Vue</el-menu-item>
       <el-menu-item index="6">WebBuilding</el-menu-item>
       <el-menu-item index="7">Reference</el-menu-item>
     </el-menu>
@@ -23,14 +23,14 @@
 import MyHTML from './HTML/index'
 import BrowerSider from './BrowerSider/index'
 import ServerSider from './ServerSider/index'
-import Programming from './Programming/index'
-import MyXML from './XML/index'
+import MyNodeJs from './NodeJs/index'
+import MyVue from './Vue/index'
 import WebBuilding from './WebBuilding/index'
 import MyReference from './Reference/index'
 export default {
   name: 'MyNav',
   components: {
-    MyHTML, BrowerSider, ServerSider, Programming, MyXML, WebBuilding, MyReference
+    MyHTML, BrowerSider, ServerSider, MyNodeJs, MyVue, WebBuilding, MyReference
   },
   data () {
     return {
@@ -53,10 +53,10 @@ export default {
           this.currentComponent = 'ServerSider'
           break
         case '4':
-          this.currentComponent = 'Programming'
+          this.currentComponent = 'MyNodeJs'
           break
         case '5':
-          this.currentComponent = 'MyXML'
+          this.currentComponent = 'MyVue'
           break
         case '6':
           this.currentComponent = 'WebBuilding'

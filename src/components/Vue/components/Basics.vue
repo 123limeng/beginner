@@ -1,8 +1,8 @@
 <template>
-  <div>这是Programming</div>
+  <div>基础</div>
 </template>
 <script>
 export default {
-  name: 'Programming'
+  name: 'Basics'
 }
 </script>
