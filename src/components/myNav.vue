@@ -14,7 +14,7 @@
       <el-menu-item index="4">NodeJs</el-menu-item>
       <el-menu-item index="5">Vue</el-menu-item>
       <el-menu-item index="6">WebBuilding</el-menu-item>
-      <el-menu-item index="7">Reference</el-menu-item>
+      <el-menu-item index="7">ES6</el-menu-item>
     </el-menu>
     <component :is="currentComponent"/>
   </div>
@@ -26,11 +26,11 @@ import ServerSider from './ServerSider/index'
 import MyNodeJs from './NodeJs/index'
 import MyVue from './Vue/index'
 import WebBuilding from './WebBuilding/index'
-import MyReference from './Reference/index'
+import MyEs6 from './ES6/index'
 export default {
   name: 'MyNav',
   components: {
-    MyHTML, BrowerSider, ServerSider, MyNodeJs, MyVue, WebBuilding, MyReference
+    MyHTML, BrowerSider, ServerSider, MyNodeJs, MyVue, WebBuilding, MyEs6
   },
   data () {
     return {
@@ -62,7 +62,7 @@ export default {
           this.currentComponent = 'WebBuilding'
           break
         case '7':
-          this.currentComponent = 'MyReference'
+          this.currentComponent = 'MyEs6'
           break
         default:
           break

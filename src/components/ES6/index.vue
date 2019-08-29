@@ -1,8 +1,8 @@
 <template>
-  <div>这是Reference</div>
+  <div>es6</div>
 </template>
 <script>
 export default {
-  name: 'Reference'
+  name: 'MyEs6'
 }
 </script>
