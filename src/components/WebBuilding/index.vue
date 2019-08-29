@@ -10,6 +10,7 @@
           active-text-color="#ffd04b"
           @select="handleSelect">
           <el-menu-item index="1">登录</el-menu-item>
+          <el-menu-item index="2">注册</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20">
@@ -20,10 +21,11 @@
 </template>
 <script>
 import Login from './components/Login'
+import Register from './components/Register'
 export default {
   name: 'WebBuilding',
   components: {
-    Login
+    Login, Register
   },
   data () {
     return {
@@ -36,6 +38,9 @@ export default {
       switch (key) {
         case '1':
           this.currentComponent = 'Login'
+          break
+        case '2':
+          this.currentComponent = 'Register'
           break
         default:
           break
