@@ -8,7 +8,6 @@
           background-color="#545c64"
           text-color="#fff"
           active-text-color="#ffd04b"
-          default-openeds="[2, 3, 4, 5]"
           @select="handleSelect">
           <el-submenu index="1">
             <template slot="title">JS教程</template>
@@ -39,7 +38,9 @@
         </el-menu>
       </el-col>
       <el-col :span="20">
-        <component :is="currentComponent"/>
+        <transition name="my-transition" mode="out-in">
+          <component :is="currentComponent"/>
+        </transition>
       </el-col>
     </el-row>
   </div>
@@ -92,3 +93,16 @@ export default {
   }
 }
 </script>
+<style scoped>
+.my-transition-enter-active {
+  transition: all .3s ease;
+}
+.my-transition-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.my-transition-enter, .my-transition-leave-active {
+  padding-left: 1000px;
+  /* margin:1000px 0 0 1000px; */
+  opacity: 0;
+}
+</style>
