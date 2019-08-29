@@ -11,6 +11,7 @@
           @select="handleSelect">
           <el-menu-item index="1">登录</el-menu-item>
           <el-menu-item index="2">注册</el-menu-item>
+          <el-menu-item index="3">购物车</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20">
@@ -22,10 +23,11 @@
 <script>
 import Login from './components/Login'
 import Register from './components/Register'
+import AddCart from './components/addCart'
 export default {
   name: 'WebBuilding',
   components: {
-    Login, Register
+    Login, Register, AddCart
   },
   data () {
     return {
@@ -41,6 +43,9 @@ export default {
           break
         case '2':
           this.currentComponent = 'Register'
+          break
+        case '3':
+          this.currentComponent = 'AddCart'
           break
         default:
           break
