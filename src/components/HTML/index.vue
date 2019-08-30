@@ -17,6 +17,7 @@
           </el-submenu>
           <el-submenu index="2">
             <template slot="title">CSS</template>
+            <el-menu-item index="2-1">Css基础</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-col>
@@ -32,10 +33,11 @@
 import HtmlBasics from './components/HtmlBasics'
 import HtmlEventPro from './components/HtmlEventPro'
 import HtmlAudio from './components/HtmlAudio'
+import CssBasics from './components/CssBasics'
 export default {
   name: 'BrowerSider',
   components: {
-    HtmlBasics, HtmlEventPro, HtmlAudio
+    HtmlBasics, HtmlEventPro, HtmlAudio, CssBasics
   },
   data () {
     return {
@@ -55,6 +57,9 @@ export default {
         case '1-3':
           this.currentComponent = 'HtmlAudio'
           break
+        case '2-1':
+          this.currentComponent = 'CssBasics'
+          break
         default:
           break
       }
@@ -70,8 +75,8 @@ export default {
   transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 .my-transition-enter, .my-transition-leave-active {
-  /* padding-left: 1000px; */
-  margin:1000px 0 0 1000px;
+  padding-left: 1000px;
+  /* margin:1000px 0 0 1000px; */
   opacity: 0;
 }
 </style>
