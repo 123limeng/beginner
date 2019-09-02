@@ -207,7 +207,9 @@ h4 {
   border-left: 4px solid #333f44;
   border-bottom: 1px solid #333f44;
 }
-.textHover {
+.textHover:hover {
   cursor: pointer;
+  font-style: italic;
+  background-color: skyblue;
 }
 </style>

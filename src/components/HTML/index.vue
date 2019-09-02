@@ -14,6 +14,9 @@
             <el-menu-item index="1-1">HTML基础</el-menu-item>
             <el-menu-item index="1-2">Html事件属性</el-menu-item>
             <el-menu-item index="1-3">Html音频视频</el-menu-item>
+            <el-menu-item index="1-4">Html拖放</el-menu-item>
+            <el-menu-item index="1-5">Html画布</el-menu-item>
+            <el-menu-item index="1-6">Html SVG</el-menu-item>
           </el-submenu>
           <el-submenu index="2">
             <template slot="title">CSS</template>
@@ -34,10 +37,13 @@ import HtmlBasics from './components/HtmlBasics'
 import HtmlEventPro from './components/HtmlEventPro'
 import HtmlAudio from './components/HtmlAudio'
 import CssBasics from './components/CssBasics'
+import HtmlDrag from './components/HtmlDrag'
+import HtmlCanvas from './components/HtmlCanvas'
+import HtmlSvg from './components/HtmlSvg'
 export default {
   name: 'BrowerSider',
   components: {
-    HtmlBasics, HtmlEventPro, HtmlAudio, CssBasics
+    HtmlBasics, HtmlEventPro, HtmlAudio, CssBasics, HtmlDrag, HtmlCanvas, HtmlSvg
   },
   data () {
     return {
@@ -56,6 +62,15 @@ export default {
           break
         case '1-3':
           this.currentComponent = 'HtmlAudio'
+          break
+        case '1-4':
+          this.currentComponent = 'HtmlDrag'
+          break
+        case '1-5':
+          this.currentComponent = 'HtmlCanvas'
+          break
+        case '1-6':
+          this.currentComponent = 'HtmlSvg'
           break
         case '2-1':
           this.currentComponent = 'CssBasics'
