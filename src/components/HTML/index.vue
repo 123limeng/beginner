@@ -17,6 +17,8 @@
             <el-menu-item index="1-4">Html拖放</el-menu-item>
             <el-menu-item index="1-5">Html画布</el-menu-item>
             <el-menu-item index="1-6">Html SVG</el-menu-item>
+            <el-menu-item index="1-7">Html Web存储</el-menu-item>
+            <el-menu-item index="1-8">应用程序缓存</el-menu-item>
           </el-submenu>
           <el-submenu index="2">
             <template slot="title">CSS</template>
@@ -40,10 +42,12 @@ import CssBasics from './components/CssBasics'
 import HtmlDrag from './components/HtmlDrag'
 import HtmlCanvas from './components/HtmlCanvas'
 import HtmlSvg from './components/HtmlSvg'
+import HtmlWebStorage from './components/HtmlWebStorage'
+import applicationCache from './components/applicationCache'
 export default {
   name: 'BrowerSider',
   components: {
-    HtmlBasics, HtmlEventPro, HtmlAudio, CssBasics, HtmlDrag, HtmlCanvas, HtmlSvg
+    HtmlBasics, HtmlEventPro, HtmlAudio, CssBasics, HtmlDrag, HtmlCanvas, HtmlSvg, HtmlWebStorage, applicationCache
   },
   data () {
     return {
@@ -71,6 +75,12 @@ export default {
           break
         case '1-6':
           this.currentComponent = 'HtmlSvg'
+          break
+        case '1-7':
+          this.currentComponent = 'HtmlWebStorage'
+          break
+        case '1-8':
+          this.currentComponent = 'applicationCache'
           break
         case '2-1':
           this.currentComponent = 'CssBasics'
