@@ -154,7 +154,46 @@
     <div v-show="boxShow">
       <p>border/margin/padding/content(width*height)</p>
     </div>
-    <h4>css边框、轮廓</h4>
+    <h4 class="textHover" @click="handleBorder">css边框、轮廓</h4>
+    <ol v-show="borderShow">
+      <li>
+        <p>边框</p>
+        <p>边框的样式：border-style: none(无边框)、dotted(点线边框)、dashed(虚线边框)、solid(实线边框)、double(双边框)、groove(3D沟槽边框)、ridge(3D脊边框)、inset(3D嵌入边框)、Outset(3D突出边框)</p>
+        <p>
+          边框的宽度：border-width: 有两种方式定义边框的宽度，一种是指定长度值的宽度，另一种是用关键字thick、thin、medium
+          这3个关键字没有具体的宽度，可以自己设置。
+        </p>
+        <p>边框的颜色：可以采用3种定义颜色的方法定义边框的颜色，但是前提是必须先定义边框的样式，才能定义边框颜色。</p>
+        <p>也可以单独设置每个边框的样式宽度颜色</p>
+      </li>
+      <li>
+        <p>轮廓：outline是边框的外围，起到突出元素的作用。</p>
+      </li>
+    </ol>
+    <h4 class="textHover" @click="handleMargin">css外边距和内边距</h4>
+    <div v-show="marginShow">
+      <ol>
+        <li>margin</li>
+        <li>padding</li>
+      </ol>
+      <div class="div1"></div>
+    </div>
+    <h4 class="textHover" @click="handleDisplay">css Display</h4>
+    <div v-show="displayShow">
+      <ul>
+        <li>
+          <strong>隐藏元素：</strong>
+          <p>display: none;    visibility: hidden;</p>
+          <p>它们之间的区别：visibility: hidden;虽然隐藏了元素但是元素还占据原来的空间，不改变页面得布局；而display: none;隐藏的元素不会占据空间</p>
+        </li>
+        <li>
+          <strong>变更块级元素和行内元素：</strong>
+          <p>display: inline/block;</p>
+        </li>
+      </ul>
+    </div>
+    <h4 class="textHover" @click="handlePosition">css position</h4>
+    <div v-show="positionShow">1</div>
   </div>
 </template>
 <script>
@@ -177,7 +216,11 @@ export default {
       linkShow: false,
       listShow: false,
       tableShow: false,
-      boxShow: true
+      boxShow: false,
+      borderShow: false,
+      marginShow: false,
+      displayShow: false,
+      positionShow: true
     }
   },
   methods: {
@@ -198,6 +241,18 @@ export default {
     },
     handleBox () {
       this.boxShow = !this.boxShow
+    },
+    handleBorder () {
+      this.borderShow = !this.borderShow
+    },
+    handleMargin () {
+      this.marginShow = !this.marginShow
+    },
+    handleDisplay () {
+      this.displayShow = !this.displayShow
+    },
+    handlePosition () {
+      this.positionShow = !this.positionShow
     }
   }
 }
@@ -211,5 +266,12 @@ h4 {
   cursor: pointer;
   font-style: italic;
   background-color: skyblue;
+}
+.div1 {
+  width: 200px;
+  height:200px;
+  background-color: #00ff00;
+  padding-left: 50px;
+  box-sizing: content-box
 }
 </style>
