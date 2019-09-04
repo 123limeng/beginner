@@ -34,7 +34,9 @@
           <el-submenu index="5">
             <template slot="title">Js Html Dom</template>
             <el-menu-item index="5-1">Dom方法</el-menu-item>
+            <el-menu-item index="5-2">改变css</el-menu-item>
           </el-submenu>
+          <el-menu-item index="6">Ajax</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20">
@@ -53,10 +55,12 @@ import JsObjectMethods from './components/Js_Object_methods'
 import JsObjPrototype from './components/Js_Obj_Prototype'
 import JsMethods from './components/Js_Methods'
 import JsHtmlDom from './components/Js_Html_Dom'
+import JsDomCss from './components/Js_Dom_css'
+import JsAjax from './components/Js_Ajax'
 export default {
   name: 'HTML',
   components: {
-    JsOutput, JsForm, JsFormApi, JsObjectMethods, JsObjPrototype, JsMethods, JsHtmlDom
+    JsOutput, JsForm, JsFormApi, JsObjectMethods, JsObjPrototype, JsMethods, JsHtmlDom, JsDomCss, JsAjax
   },
   data () {
     return {
@@ -85,6 +89,12 @@ export default {
           break
         case '5-1':
           this.currentComponent = 'JsHtmlDom'
+          break
+        case '5-2':
+          this.currentComponent = 'JsDomCss'
+          break
+        case '6':
+          this.currentComponent = 'JsAjax'
           break
         default:
           break
