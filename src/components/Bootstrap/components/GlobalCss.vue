@@ -1,8 +1,8 @@
 <template>
-  <div>这是ServerSider</div>
+  <div>全局css</div>
 </template>
 <script>
 export default {
-  name: 'ServerSider'
+  name: 'GlobalCss'
 }
 </script>

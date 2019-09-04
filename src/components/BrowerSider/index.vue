@@ -70,7 +70,6 @@ export default {
   },
   methods: {
     handleSelect (key) {
-      console.log(key)
       switch (key) {
         case '2-1':
           this.currentComponent = 'JsForm'
