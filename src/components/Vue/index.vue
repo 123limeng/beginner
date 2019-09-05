@@ -31,8 +31,8 @@ export default {
   },
   data () {
     return {
-      activeIndex: '1',
-      currentComponent: 'Basics'
+      activeIndex: '2',
+      currentComponent: 'MyProcess'
     }
   },
   methods: {

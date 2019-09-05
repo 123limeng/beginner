@@ -1,6 +1,7 @@
 # test
 
 > A Vue.js project
+>初步学习vue，将前端的学习笔记记录在一个项目中，以便后期查阅、更新。
 
 ## Build Setup
 
