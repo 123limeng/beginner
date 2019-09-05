@@ -30,10 +30,12 @@
 </template>
 <script>
 import MyVariables from './components/Variables'
+import Nesting from './components/Nesting'
+import Operations from './components/Operations'
 export default {
   name: 'Bootstrap',
   components: {
-    MyVariables
+    MyVariables, Nesting, Operations
   },
   data () {
     return {
@@ -46,6 +48,12 @@ export default {
       switch (key) {
         case '1':
           this.currentComponent = 'MyVariables'
+          break
+        case '3':
+          this.currentComponent = 'Nesting'
+          break
+        case '4':
+          this.currentComponent = 'Operations'
           break
         default:
           break
