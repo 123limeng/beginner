@@ -32,10 +32,12 @@
 import MyVariables from './components/Variables'
 import Nesting from './components/Nesting'
 import Operations from './components/Operations'
+import Escaping from './components/Escaping'
+import LessFunction from './components/LessFunction'
 export default {
   name: 'Bootstrap',
   components: {
-    MyVariables, Nesting, Operations
+    MyVariables, Nesting, Operations, Escaping, LessFunction
   },
   data () {
     return {
@@ -54,6 +56,12 @@ export default {
           break
         case '4':
           this.currentComponent = 'Operations'
+          break
+        case '5':
+          this.currentComponent = 'Escaping'
+          break
+        case '6':
+          this.currentComponent = 'LessFunction'
           break
         default:
           break
