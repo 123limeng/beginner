@@ -29,6 +29,7 @@
     <h4>列排序</h4>
     <el-divider/>
     <p>使用.col-md-push-* 和 .col-md-pull-*可以改变列的顺序</p>
+    <el-backtop>BackTop</el-backtop>
   </div>
 </template>
 <script>
