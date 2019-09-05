@@ -25,7 +25,7 @@
     </el-form>
     <el-table
       :data="cartList">
-      <el-table-column type="index" label="序号" width="70px"/>
+      <el-table-column type="index" label="序号" width="100px"/>
       <el-table-column label="商品名称">
         <template slot-scope="scope">
           <span>{{ scope.row.name }}</span>
