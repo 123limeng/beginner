@@ -10,6 +10,8 @@
           active-text-color="#ffd04b"
           @select="handleSelect">
           <el-menu-item index="1">全局css样式</el-menu-item>
+          <el-menu-item index="2">组件</el-menu-item>
+          <el-menu-item index="3">JavaScript插件</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20">
@@ -20,10 +22,12 @@
 </template>
 <script>
 import GlobalCss from './components/GlobalCss'
+import BootstrapTemplate from './components/BootStrapTemplate'
+import JavaScriptUnit from './components/JavaScriptUnit'
 export default {
   name: 'Bootstrap',
   components: {
-    GlobalCss
+    GlobalCss, BootstrapTemplate, JavaScriptUnit
   },
   data () {
     return {
@@ -36,6 +40,12 @@ export default {
       switch (key) {
         case '1':
           this.currentComponent = 'GlobalCss'
+          break
+        case '2':
+          this.currentComponent = 'BootstrapTemplate'
+          break
+        case '3':
+          this.currentComponent = 'JavaScriptUnit'
           break
         default:
           break
