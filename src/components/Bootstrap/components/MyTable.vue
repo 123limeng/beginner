@@ -1,6 +1,43 @@
 <template>
   <div>
     <h3>表格</h3>
+    <el-divider/>
+    <h4>基本实例</h4>
+    <p>为table标签添加.table类可以为其添加简单样式——少量内补padding和水平方向的分割线。</p>
+    <el-divider/>
+    <h4>条纹状表格</h4>
+    <p>.table-striped类可以为tbody之内的每一行添加斑马条纹样式。这一功能ie8不能支持</p>
+    <p>.table-bordered类为表格和其中每一个单元格添加边框。</p>
+    <p>通过.table-hover类可以让tbody中每一行对鼠标悬停做出响应。</p>
+    <p>通过.table-condebsed类可以让表格更加紧凑，单元格的内补（padding）会减半。</p>
+    <el-divider/>
+    <h4>状态类</h4>
+    <p>通过状态类为行或者单元格设置颜色</p>
+    <table class="table">
+      <tr>
+        <td>.active</td>
+        <td>鼠标悬停在行或者单元格上时设置的颜色</td>
+      </tr>
+      <tr>
+        <td>.success</td>
+        <td>标识成功或积极的动作</td>
+      </tr>
+      <tr>
+        <td>.info</td>
+        <td>标识普通的提示信息或动作</td>
+      </tr>
+      <tr>
+        <td>.warning</td>
+        <td>标识警告或需要用户注意</td>
+      </tr>
+      <tr>
+        <td>.danger</td>
+        <td>标识危险或潜在的带来负面影响的动作</td>
+      </tr>
+    </table>
+    <el-divider/>
+    <h4>响应式表格</h4>
+    <p>将.table元素包裹在.table-responsive元素内，即可创建响应式表格。就是会在小屛设备（小于768px）上水平滚动。当屏幕宽度大于768px时，滚动条消失。</p>
   </div>
 </template>
 <script>
