@@ -1,6 +1,44 @@
 <template>
   <div>
     <h3>表单</h3>
+    <el-divider/>
+    <h4>基本实例</h4>
+    <p>用.form-control类设置的input/textarea/select元素都默认设置宽度为100%，将label元素和前面提到的集中元素放在一个.form-group中，可以获得最好的排版。</p>
+    <p>不要将表单组和输入框组混合使用，建议将输入框组嵌套在表单组中。</p>
+    <el-divider/>
+    <h4>内联表单</h4>
+    <p>为form元素添加.form-inline类使其内容左对齐，并表现为inline-block级别的控件，只适用于在视口至少在768px宽度时（视口宽度再小表单就会折叠）</p>
+    <p>可能需要手动设置宽度</p>
+    <p>一定要添加label标签，如果没有为每个输入控件设置label标签，屏幕阅读器将无法正确识别。</p>
+    <el-divider/>
+    <el-backtop/>
+    <h4>水平排列的表单</h4>
+    <p>通过为表单添加.form-horizontal类，并使用bootstrap预置的栅格类，可以将label标签和控件水平排列。</p>
+    <img src="./asset/form_horizontal.png" alt="水平排列的表单">
+    <el-divider/>
+    <h4>被支持的控件</h4>
+    <h5>输入框</h5>
+    <p>
+      大部分表单控件、文本输入域控件，还支持所有h5类型的输入控件。text、password、datetime、datetime-local、
+      date、month、time、week、number、email、url、search、tel、color
+    </p>
+    <h5>文本域</h5>
+    <h5>多选和单选框</h5>
+    <h5>下拉框</h5>
+    <el-divider/>
+    <h4>静态控件</h4>
+    <p>如果在表单中需要将一行纯文本和label标签放置于同一行，为p元素添加.form-control-static类</p>
+    <el-divider/>
+    <h4>焦点状态</h4>
+    <el-divider/>
+    <h4>禁用状态</h4>
+    <el-divider/>
+    <h4>校验状态</h4>
+    <el-divider/>
+    <h4>只读状态</h4>
+    <el-divider/>
+    <h4>控件尺寸</h4>
+    <p>通过.input-lg类似的类设置高度，通过.col-lg-*类似的类设置宽度</p>
   </div>
 </template>
 <script>
