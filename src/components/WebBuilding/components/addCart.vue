@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>添加商品</h3>
-    <el-form label-width="80px">
+    <el-form label-width="80px" :model="goods">
       <el-row>
         <el-col :span="6">
           <el-form-item label="商品名称">
@@ -36,7 +36,7 @@
           <span>{{ scope.row.price }}</span>
         </template>
       </el-table-column>
-      <el-table-column label="商品数量">
+      <el-table-column label="商品数量" align="center">
         <template slot-scope="scope">
           <el-button icon="el-icon-minus" @click="minus(scope)"/>
           <span>{{ scope.row.number }}</span>
@@ -45,10 +45,13 @@
       </el-table-column>
       <el-table-column label="总价">
         <template slot-scope="scope">
-          <span>{{ parseInt(scope.row.number * scope.row.price) }}</span>
+          <span>{{ (scope.row.number * scope.row.price).toFixed(2) }}</span>
         </template>
       </el-table-column>
     </el-table>
+    <div>
+      <span>总价：{{ sum }}</span>
+    </div>
   </div>
 </template>
 <script>
@@ -70,11 +73,20 @@ export default {
       ]
     }
   },
+  computed: {
+    sum () {
+      var sum = 0
+      var arr = this.cartList
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i].number * arr[i].price
+      }
+      return sum.toFixed(2)
+    }
+  },
   methods: {
     addGoods () {
       this.cartList.push(this.goods)
       this.$message.success('添加成功')
-      console.log(this.cartList)
     },
     minus (data) {
       if (data.row.number === 0) {
