@@ -37,6 +37,7 @@
             <el-menu-item index="5-2">改变css</el-menu-item>
           </el-submenu>
           <el-menu-item index="6">Ajax</el-menu-item>
+          <el-menu-item index="7">Js 总结</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20">
@@ -57,10 +58,11 @@ import JsMethods from './components/Js_Methods'
 import JsHtmlDom from './components/Js_Html_Dom'
 import JsDomCss from './components/Js_Dom_css'
 import JsAjax from './components/Js_Ajax'
+import JsTest from './components/Js_test'
 export default {
   name: 'HTML',
   components: {
-    JsOutput, JsForm, JsFormApi, JsObjectMethods, JsObjPrototype, JsMethods, JsHtmlDom, JsDomCss, JsAjax
+    JsOutput, JsForm, JsFormApi, JsObjectMethods, JsObjPrototype, JsMethods, JsHtmlDom, JsDomCss, JsAjax, JsTest
   },
   data () {
     return {
@@ -94,6 +96,9 @@ export default {
           break
         case '6':
           this.currentComponent = 'JsAjax'
+          break
+        case '7':
+          this.currentComponent = 'JsTest'
           break
         default:
           break
