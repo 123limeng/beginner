@@ -38,9 +38,9 @@
       </el-table-column>
       <el-table-column label="商品数量">
         <template slot-scope="scope">
-          <el-button icon="el-icon-minus" @click="minus"/>
+          <el-button icon="el-icon-minus" @click="minus(scope)"/>
           <span>{{ scope.row.number }}</span>
-          <el-button icon="el-icon-plus" @click="plus"/>
+          <el-button icon="el-icon-plus" @click="plus(scope)"/>
         </template>
       </el-table-column>
       <el-table-column label="总价">
@@ -76,8 +76,15 @@ export default {
       this.$message.success('添加成功')
       console.log(this.cartList)
     },
-    minus (scope) {
-
+    minus (data) {
+      if (data.row.number === 0) {
+        data.row.number = 0
+      } else {
+        data.row.number--
+      }
+    },
+    plus (data) {
+      data.row.number++
     }
   }
 }
