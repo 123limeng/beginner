@@ -2,7 +2,7 @@
   <div>
     <el-menu
       :default-active="activeIndex"
-      class="el-menu-demo"
+      class="el-menu-demo position-menu"
       mode="horizontal"
       background-color="#545c64"
       text-color="#fff"
@@ -16,6 +16,7 @@
       <el-menu-item index="6">WebBuilding</el-menu-item>
       <el-menu-item index="7">ES6</el-menu-item>
       <el-menu-item index="8">Less</el-menu-item>
+      <el-menu-item index="9">Element-UI</el-menu-item>
     </el-menu>
     <component :is="currentComponent"/>
   </div>
@@ -29,10 +30,11 @@ import MyVue from './Vue/index'
 import WebBuilding from './WebBuilding/index'
 import MyEs6 from './ES6/index'
 import MyLess from './Less/index'
+import MyElementUi from './Element_ui/index'
 export default {
   name: 'MyNav',
   components: {
-    MyHTML, BrowerSider, Bootstrap, MyNodeJs, MyVue, WebBuilding, MyEs6, MyLess
+    MyHTML, BrowerSider, Bootstrap, MyNodeJs, MyVue, WebBuilding, MyEs6, MyLess, MyElementUi
   },
   data () {
     return {
@@ -68,6 +70,9 @@ export default {
           break
         case '8':
           this.currentComponent = 'MyLess'
+          break
+        case '9':
+          this.currentComponent = 'MyElementUi'
           break
         default:
           break
