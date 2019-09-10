@@ -1,0 +1,27 @@
+<template>
+  <div>
+    <h3>走马灯carousel</h3>
+    <el-tabs type="card" v-model="activeTab">
+      <el-tab-pane label="基础用法" name="first">
+        <typical-carousel/>
+      </el-tab-pane>
+      <el-tab-pane label="基础用法" name="second">
+        2
+      </el-tab-pane>
+    </el-tabs>
+  </div>
+</template>
+<script>
+import TypicalCarousel from './carousel/typical_carousel'
+export default {
+  name: 'MyCarousel',
+  components: {
+    TypicalCarousel
+  },
+  data () {
+    return {
+      activeTab: 'first'
+    }
+  }
+}
+</script>

@@ -22,10 +22,11 @@
 </template>
 <script>
 import MyForm from './components/MyForm.vue'
+import MyCarousel from './components/MyCarousel'
 export default {
   name: 'MyElementUi',
   components: {
-    MyForm
+    MyForm, MyCarousel
   },
   data () {
     return {
@@ -38,6 +39,12 @@ export default {
       switch (key) {
         case '1':
           this.currentComponent = 'MyForm'
+          break
+        case '2':
+          this.currentComponent = 'MyCarousel'
+          break
+        default:
+          break
       }
     }
   }
