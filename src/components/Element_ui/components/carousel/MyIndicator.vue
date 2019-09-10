@@ -2,8 +2,8 @@
   <div>
     <h4>指示器</h4>
     <div>
-      <el-carousel class="bolck carousel-size" indicator-position="outside">
-        <el-carousel-item v-for="item in images" :key="item">
+      <el-carousel class="block carousel-size" indicator-position="outside" height="250px">
+        <el-carousel-item v-for="item in images" :key="item.id">
           <img :src="item.item" alt="">
         </el-carousel-item>
       </el-carousel>
@@ -17,13 +17,16 @@ export default {
     return {
       images: [
         {
-          item: require('./asset/array.png')
-        },
-        {
-          item: require('./asset/array2.png')
-        },
-        {
+          id: 0,
           item: require('./asset/1.jpg')
+        },
+        {
+          id: 1,
+          item: require('./asset/2.jpg')
+        },
+        {
+          id: 2,
+          item: require('./asset/3.jpg')
         }
       ]
     }
