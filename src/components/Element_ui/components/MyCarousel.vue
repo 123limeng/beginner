@@ -5,18 +5,19 @@
       <el-tab-pane label="基础用法" name="first">
         <typical-carousel/>
       </el-tab-pane>
-      <el-tab-pane label="基础用法" name="second">
-        2
+      <el-tab-pane label="指示器" name="second">
+        <my-indicator/>
       </el-tab-pane>
     </el-tabs>
   </div>
 </template>
 <script>
 import TypicalCarousel from './carousel/typical_carousel'
+import MyIndicator from './carousel/MyIndicator'
 export default {
   name: 'MyCarousel',
   components: {
-    TypicalCarousel
+    TypicalCarousel, MyIndicator
   },
   data () {
     return {

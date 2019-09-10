@@ -1,10 +1,9 @@
 <template>
   <div>
-    <h4>基础用法</h4>
+    <h4>指示器</h4>
     <div>
-      <el-carousel class="carousel-size block" height="250px">
+      <el-carousel class="bolck carousel-size" indicator-position="outside">
         <el-carousel-item v-for="item in images" :key="item">
-          <!-- <h3 class="small">{{ item }}</h3> -->
           <img :src="item.item" alt="">
         </el-carousel-item>
       </el-carousel>
@@ -13,7 +12,7 @@
 </template>
 <script>
 export default {
-  name: 'TypicalCarousel',
+  name: 'MyIndicator',
   data () {
     return {
       images: [
