@@ -1,8 +1,8 @@
 <template>
   <div>
-    <!-- <h4>典型表单</h4> -->
+    <!-- <h4>表单验证</h4> -->
     <div class="form-bg">
-      <el-form label-width="100px" ref="form" :model="form">
+      <el-form label-width="100px" ref="form" :model="form" :rules="rules">
         <el-row>
           <el-col :span="8" :offset="8">
             <el-form-item label="活动名称" prop="name">
@@ -22,13 +22,17 @@
         </el-row>
         <el-row>
           <el-col :span="8" :offset="8">
-            <el-form-item label="活动时间" prop="dateTime">
+            <el-form-item label="活动时间" required>
               <el-col :span="11">
-                <el-date-picker v-model="form.date" type="date" placeholder="选择日期" style="width: 100%;"></el-date-picker>
+                <el-form-item prop="date">
+                  <el-date-picker v-model="form.date" type="date" placeholder="选择日期" style="width: 100%;"></el-date-picker>
+                </el-form-item>
               </el-col>
               <el-col class="line" :span="2">-</el-col>
               <el-col :span="11">
-                <el-time-picker v-model="form.time" placeholder="选择时间" style="width: 100%;"></el-time-picker>
+                <el-form-item prop="time">
+                  <el-time-picker v-model="form.time" placeholder="选择时间" style="width: 100%;"></el-time-picker>
+                </el-form-item>
               </el-col>
             </el-form-item>
           </el-col>
@@ -81,11 +85,11 @@
 </template>
 <script>
 export default {
-  name: 'TypicalForm',
+  name: 'ValidateForm',
   data () {
     return {
       form: {
-        checkedValue: '',
+        checkedValue: undefined,
         active: true,
         checkedList: [],
         resource: 1,
@@ -93,14 +97,42 @@ export default {
         date: undefined,
         time: undefined,
         activeForm: undefined
+      },
+      rules: {
+        name: [
+          {
+            required: true, message: '请输入活动名称', trigger: 'blur'
+          }
+        ],
+        checkedValue: [
+          {
+            required: true, message: '请选择活动区域', trigger: 'blur'
+          }
+        ],
+        date: [
+          {
+            type: 'date', required: true, message: '请选择日期', trigger: 'blur'
+          }
+        ],
+        time: [
+          {
+            type: 'date', required: true, message: '请选择时间', trigger: 'blur'
+          }
+        ]
       }
     }
   },
   methods: {
     handleCreate () {
-      console.log(this.form)
-      this.$message.success('创建成功')
-      this.$refs.form.resetFields()
+      this.$refs.form.validate((valid) => {
+        if (valid) {
+          alert('submit')
+          this.$refs.form.resetFields()
+        } else {
+          console.log('error submit')
+          return false
+        }
+      })
     }
   }
 }
