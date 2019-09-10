@@ -24,6 +24,7 @@
           <el-submenu index="2">
             <template slot="title">CSS</template>
             <el-menu-item index="2-1">Css基础</el-menu-item>
+            <el-menu-item index="2-2">css难点</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-col>
@@ -46,10 +47,11 @@ import HtmlSvg from './components/HtmlSvg'
 import HtmlWebStorage from './components/HtmlWebStorage'
 import applicationCache from './components/applicationCache'
 import HtmlForm from './components/HtmlForm'
+import CssDifficulty from './components/CssDifficulty'
 export default {
   name: 'BrowerSider',
   components: {
-    HtmlBasics, HtmlEventPro, HtmlAudio, CssBasics, HtmlDrag, HtmlCanvas, HtmlSvg, HtmlWebStorage, applicationCache, HtmlForm
+    HtmlBasics, CssDifficulty, HtmlEventPro, HtmlAudio, CssBasics, HtmlDrag, HtmlCanvas, HtmlSvg, HtmlWebStorage, applicationCache, HtmlForm
   },
   data () {
     return {
@@ -89,6 +91,9 @@ export default {
           break
         case '2-1':
           this.currentComponent = 'CssBasics'
+          break
+        case '2-2':
+          this.currentComponent = 'CssDifficulty'
           break
         default:
           break
