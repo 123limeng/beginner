@@ -3,7 +3,7 @@
     <h4>基础用法</h4>
     <div>
       <el-carousel class="carousel-size block" height="250px">
-        <el-carousel-item v-for="item in images" :key="item">
+        <el-carousel-item v-for="item in images" :key="item.id">
           <!-- <h3 class="small">{{ item }}</h3> -->
           <img :src="item.item" alt="">
         </el-carousel-item>
@@ -18,13 +18,16 @@ export default {
     return {
       images: [
         {
-          item: require('./asset/array.png')
-        },
-        {
-          item: require('./asset/array2.png')
-        },
-        {
+          id: 0,
           item: require('./asset/1.jpg')
+        },
+        {
+          id: 1,
+          item: require('./asset/2.jpg')
+        },
+        {
+          id: 2,
+          item: require('./asset/3.jpg')
         }
       ]
     }
@@ -34,6 +37,10 @@ export default {
 <style scoped>
 .block {
   margin: 0 auto;
+}
+img {
+  width: 100%;
+  height: 100%;
 }
 .carousel-size {
   width: 50%;
