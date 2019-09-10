@@ -19,6 +19,9 @@
       <el-tab-pane label="自定义验证规则" name="five">
         <customize-validate-rules/>
       </el-tab-pane>
+      <el-tab-pane label="动态增减表单项" name="six">
+        <dynamic-add-form/>
+      </el-tab-pane>
     </el-tabs>
   </div>
 </template>
@@ -28,10 +31,11 @@ import InlineForm from './Form/inline_form'
 import AlignForm from './Form/align_form'
 import ValidateForm from './Form/validate_form'
 import CustomizeValidateRules from './Form/customize_validate_rules'
+import DynamicAddForm from './Form/dynamic_add_form'
 export default {
   name: 'MyForm',
   components: {
-    TypicalForm, InlineForm, AlignForm, ValidateForm, CustomizeValidateRules
+    TypicalForm, InlineForm, AlignForm, ValidateForm, CustomizeValidateRules, DynamicAddForm
   },
   data () {
     return {
