@@ -46,8 +46,15 @@
     <el-divider/>
     <h4>滚动行为</h4>
     <p>使用前端路由，当切换到新路由时，想要页面滚动到顶部，或者是保持原先的滚动位置，就像重新加载页面一样。vue-router可以自定义路由切换时页面时如何滚动的。<strong>这个功能只有在html5 history模式下可用</strong></p>
-    <p>当创建一个router实例，可以提供一个scrollBehavior方法，该方法在前进、后退或切换导航时触发。scrollBehavior方法返回to和from路由对象，第三个参数savedPosition当且仅当popstate导航（通过浏览器的前进后退按钮）时在触发，返回滚动条的坐标（x:number, y:number）</p>
+    <p>
+      当创建一个router实例，可以提供一个scrollBehavior方法，该方法在前进、后退或切换导航时触发。scrollBehavior方法返回to和from路由对象，第三个参数savedPosition当且仅当popstate导航（通过浏览器的前进后退按钮）时在触发，返回滚动条的坐标（x:number, y:number），如果
+      返回一个布尔值，或者一个空对象，那么不会发生滚动。
+    </p>
     <img src="./asset/scrollBehavior.png" alt="">
+    <el-divider/>
+    <h4>过渡动效</h4>
+    <p>router-view是基本的动态组件，所以可以用transition组件为它添加一些过渡效果。</p>
+    <img src="./asset/transition.png" alt="">
   </div>
 </template>
 <script>
