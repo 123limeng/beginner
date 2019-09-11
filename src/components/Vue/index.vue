@@ -11,6 +11,7 @@
           @select="handleSelect">
           <el-menu-item index="1">基础</el-menu-item>
           <el-menu-item index="2">进阶</el-menu-item>
+          <el-menu-item index="3">vue-router</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20">
@@ -24,15 +25,16 @@
 <script>
 import Basics from './components/Basics'
 import MyProcess from './components/Process'
+import MyVueRouter from './components/MyVue_Router'
 export default {
   name: 'MyVue',
   components: {
-    Basics, MyProcess
+    Basics, MyProcess, MyVueRouter
   },
   data () {
     return {
-      activeIndex: '2',
-      currentComponent: 'MyProcess'
+      activeIndex: '3',
+      currentComponent: 'MyVueRouter'
     }
   },
   methods: {
@@ -43,6 +45,9 @@ export default {
           break
         case '2':
           this.currentComponent = 'MyProcess'
+          break
+        case '3':
+          this.currentComponent = 'MyVueRouter'
           break
         default:
           break
