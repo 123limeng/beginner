@@ -22,6 +22,32 @@
     <el-divider/>
     <h4>嵌套路由</h4>
     <img src="./asset/nestRouter.png" alt="">
+    <el-divider/>
+    <h4>命名路由</h4>
+    <p>命名路由的常见用途：替换router-link中to属性，如果不使用命名路由，router-link中to属性要设置全路由，不够灵活，修改麻烦，使用命名路由是需要使用包含name属性的对象即可。</p>
+    <p>如果设置了默认子路由，则不要在父级路由上设置name属性。</p>
+    <el-divider/>
+    <h4>命名视图</h4>
+    <p>同时展示多个视图，可以在界面中拥有多个单独命名的视图，而不是只有一个出口，如果router-view没有设置名字，那么默认为default。</p>
+    <p>对于同一个路由，多个视图就需要多个组件。</p>
+    <img src="./asset/MultiRouter.png" alt="">
+    <el-divider/>
+    <h4>动态路径</h4>
+    <p>需要把某种模式匹配到的所有路由，全都映射到同一组件上。</p>
+    <p style="text-indent: 50px;">比如对于一个user组件，对于所有id各不相同的用户，都要使用这个组件，可以使用动态路由参数达到效果。</p>
+    <img src="./asset/DynamicRouter.png" alt="">
+    <p>一个路径参数使用冒号: 标记，当匹配到一个路由时，参数值会被设置到this.$route.params，可以在每个组件内使用。</p>
+    <p>可以在路径中设置多段路由参数，对应的值都会设置到$route.params中，除了$route.params外，$route对象还提供了其他的信息。比如$route.query、$route.hash</p>
+    <p>有时同一个路径可以匹配多个路由，此时匹配的优先级就按照路由的定义顺序：谁先定义，谁的优先级就高。</p>
+    <el-divider/>
+    <h4>查询字符串</h4>
+    <p>实现子路由，除了使用动态参数，也可以使用查询字符串。</p>
+    <img src="./asset/searchString.png" alt="">
+    <el-divider/>
+    <h4>滚动行为</h4>
+    <p>使用前端路由，当切换到新路由时，想要页面滚动到顶部，或者是保持原先的滚动位置，就像重新加载页面一样。vue-router可以自定义路由切换时页面时如何滚动的。<strong>这个功能只有在html5 history模式下可用</strong></p>
+    <p>当创建一个router实例，可以提供一个scrollBehavior方法，该方法在前进、后退或切换导航时触发。scrollBehavior方法返回to和from路由对象，第三个参数savedPosition当且仅当popstate导航（通过浏览器的前进后退按钮）时在触发，返回滚动条的坐标（x:number, y:number）</p>
+    <img src="./asset/scrollBehavior.png" alt="">
   </div>
 </template>
 <script>
