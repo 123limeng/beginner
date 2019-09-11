@@ -58,11 +58,11 @@ import JsMethods from './components/Js_Methods'
 import JsHtmlDom from './components/Js_Html_Dom'
 import JsDomCss from './components/Js_Dom_css'
 import JsAjax from './components/Js_Ajax'
-import JsTest from './components/Js_test'
+import JsDifficuty from './components/Js_Difficulty'
 export default {
   name: 'HTML',
   components: {
-    JsOutput, JsForm, JsFormApi, JsObjectMethods, JsObjPrototype, JsMethods, JsHtmlDom, JsDomCss, JsAjax, JsTest
+    JsOutput, JsForm, JsFormApi, JsObjectMethods, JsObjPrototype, JsMethods, JsHtmlDom, JsDomCss, JsAjax, JsDifficuty
   },
   data () {
     return {
@@ -98,7 +98,7 @@ export default {
           this.currentComponent = 'JsAjax'
           break
         case '7':
-          this.currentComponent = 'JsTest'
+          this.currentComponent = 'JsDifficuty'
           break
         default:
           break
