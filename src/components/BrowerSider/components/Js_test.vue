@@ -1,8 +1,7 @@
 <template>
   <div>
-    <h3>总结</h3>
-    <el-divider/>
     <h4>js数组去重的5种方法</h4>
+    <el-backtop/>
     <ol>
       <li>
         <h5>遍历数组法</h5>
