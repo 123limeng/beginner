@@ -23,10 +23,11 @@
 <script>
 import MyForm from './components/MyForm.vue'
 import MyCarousel from './components/MyCarousel'
+import MyCascarder from './components/MyCascader'
 export default {
   name: 'MyElementUi',
   components: {
-    MyForm, MyCarousel
+    MyForm, MyCarousel, MyCascarder
   },
   data () {
     return {
@@ -42,6 +43,9 @@ export default {
           break
         case '2':
           this.currentComponent = 'MyCarousel'
+          break
+        case '3':
+          this.currentComponent = 'MyCascarder'
           break
         default:
           break
