@@ -9,9 +9,9 @@
       <el-button type="primary" @click="handleEdit">编辑</el-button>
     </div>
     <el-dialog :title="typeMap[type]" :visible.sync="dialogshow">
-      <el-form label-width="100px">
-        <el-form-item :label="typeMap[type] + '原因'">
-          <el-input/>
+      <el-form label-width="100px" ref="form" :model="form" :rules="rules">
+        <el-form-item :label="typeMap[type] + '原因'" prop="age">
+          <el-input v-model="form.age"/>
         </el-form-item>
       </el-form>
     </el-dialog>
@@ -30,13 +30,28 @@ export default {
         edit: '编辑'
       },
       type: undefined,
-      dialogshow: false
+      dialogshow: false,
+      form: {
+        age: ''
+      },
+      rules: {
+        age: [
+          {
+            required: true,
+            message: '请输入年龄',
+            trigger: 'blur'
+          }
+        ]
+      }
     }
   },
   methods: {
     handleAdd () {
       this.type = 'add'
       this.dialogshow = true
+      this.$nextTick(() => {
+        this.$refs.form.clearValidate()
+      })
     },
     handleDelete () {
       this.type = 'delete'
