@@ -12,6 +12,7 @@
           <el-menu-item index="1">登录</el-menu-item>
           <el-menu-item index="2">注册</el-menu-item>
           <el-menu-item index="3">购物车</el-menu-item>
+          <el-menu-item index="4">不同的dialog</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20">
@@ -24,10 +25,11 @@
 import Login from './components/Login'
 import Register from './components/Register'
 import AddCart from './components/addCart'
+import DifferentDialog from './components/dialog'
 export default {
   name: 'WebBuilding',
   components: {
-    Login, Register, AddCart
+    Login, Register, AddCart, DifferentDialog
   },
   data () {
     return {
@@ -46,6 +48,9 @@ export default {
           break
         case '3':
           this.currentComponent = 'AddCart'
+          break
+        case '4':
+          this.currentComponent = 'DifferentDialog'
           break
         default:
           break
