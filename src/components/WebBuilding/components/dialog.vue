@@ -56,18 +56,30 @@ export default {
     handleDelete () {
       this.type = 'delete'
       this.dialogshow = true
+      this.$nextTick(() => {
+        this.$refs.form.clearValidate()
+      })
     },
     handleEdit () {
       this.type = 'edit'
       this.dialogshow = true
+      this.$nextTick(() => {
+        this.$refs.form.clearValidate()
+      })
     },
     handleReport () {
       this.type = 'report'
       this.dialogshow = true
+      this.$nextTick(() => {
+        this.$refs.form.clearValidate()
+      })
     },
     handleInform () {
       this.type = 'inform'
       this.dialogshow = true
+      this.$nextTick(() => {
+        this.$refs.form.clearValidate()
+      })
     }
   }
 }
