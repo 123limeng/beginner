@@ -17,6 +17,7 @@
       <el-menu-item index="7">ES6</el-menu-item>
       <el-menu-item index="8">Less</el-menu-item>
       <el-menu-item index="9">Element-UI</el-menu-item>
+      <el-menu-item index="10">Lm-UI</el-menu-item>
     </el-menu>
     <component :is="currentComponent"/>
   </div>
@@ -31,10 +32,11 @@ import WebBuilding from './WebBuilding/index'
 import MyEs6 from './ES6/index'
 import MyLess from './Less/index'
 import MyElementUi from './Element_ui/index'
+import LmUi from './Lm_ui/index'
 export default {
   name: 'MyNav',
   components: {
-    MyHTML, BrowerSider, Bootstrap, MyNodeJs, MyVue, WebBuilding, MyEs6, MyLess, MyElementUi
+    MyHTML, LmUi, BrowerSider, Bootstrap, MyNodeJs, MyVue, WebBuilding, MyEs6, MyLess, MyElementUi
   },
   data () {
     return {
@@ -73,6 +75,9 @@ export default {
           break
         case '9':
           this.currentComponent = 'MyElementUi'
+          break
+        case '10':
+          this.currentComponent = 'LmUi'
           break
         default:
           break
