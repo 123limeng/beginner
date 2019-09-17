@@ -11,6 +11,9 @@
       <el-tab-pane label="数组去重" lazy>
         <js-test/>
       </el-tab-pane>
+      <el-tab-pane label="JavaScript面向对象编程" lazy>
+        <js-oo/>
+      </el-tab-pane>
     </el-tabs>
   </div>
 </template>
@@ -18,12 +21,14 @@
 import JsRecycling from './Js_Recycling.vue'
 import ArrayMethods from './Array_methods'
 import JsTest from './Js_test'
+import JsOo from './Js_Oo'
 export default {
   name: 'JsDifficulty',
   components: {
     JsRecycling,
     ArrayMethods,
-    JsTest
+    JsTest,
+    JsOo
   }
 }
 </script>
