@@ -1,0 +1,86 @@
+<template>
+  <div>
+    <h3>javaScript正则表达式</h3>
+    <el-divider/>
+    <h4>使用字符串方法：</h4>
+    <p>javaScript正则表达式通常用于两种字符串方法：search()和replace().</p>
+    <p>
+      search()用于检测字符串中指定的子字符串，或者检索与正则表达式匹配的的子字符串，并返回子串的起始位置。
+    </p>
+    <p>
+      replace()用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。
+    </p>
+    <el-divider/>
+    <h4>正则表达式修饰符</h4>
+    <ul>
+      <li>
+        <p>i：执行对大小写不敏感的匹配</p>
+      </li>
+      <li>
+        <p>g：执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）</p>
+      </li>
+      <li>
+        <p>m：执行多行匹配</p>
+      </li>
+    </ul>
+    <el-divider/>
+    <h4>正则表达式模式</h4>
+    <ul>
+      <li>
+        <p>方括号用于查找某个范围内的字符</p>
+      </li>
+      <li>
+        <p>
+          元字符是拥有特殊含义的字符
+          <ul>
+            <li>
+              <p>\d：查找数字</p>
+            </li>
+            <li>
+              <p>\s：查找空白字符</p>
+            </li>
+            <li>
+              <p>\b：匹配单词边界</p>
+            </li>
+            <li>
+              <p>\uxxxx：查找以十六进制数xxxx规定的unicode字符</p>
+            </li>
+          </ul>
+        </p>
+      </li>
+      <li>
+        <p>
+          量词
+          <ul>
+            <li>
+              <p>n+：匹配任何包含至少一个n的字符串</p>
+            </li>
+            <li>
+              <p>n*：匹配任何包含零个或多个n的字符串</p>
+            </li>
+            <li>
+              <p>n?：匹配任何包含零个或一个n的字符串</p>
+            </li>
+          </ul>
+        </p>
+      </li>
+    </ul>
+    <el-divider/>
+    <h4>使用RegExp对象</h4>
+    <p>RegExp对象是一个预定义了属性和方法的正则表达式对象。</p>
+    <el-divider/>
+    <h4>使用test()</h4>
+    <p>
+      test()方法用于检测一个字符串是否匹配某个模式，如果字符串中含有匹配的文本，则返回true，否则返回false。
+    </p>
+    <el-backtop/>
+    <el-divider/>
+    <h4>使用exec()</h4>
+    <p>exec()用于检测字符串中正则表达式的匹配，该函数返回一个数组，其中存放匹配的结果，如果未找到匹配，则返回null。</p>
+  </div>
+</template>
+<script>
+export default {
+  name: 'JsReg'
+}
+</script>

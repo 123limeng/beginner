@@ -16,6 +16,7 @@
             <el-menu-item index="1-3">JS语法</el-menu-item>
             <el-menu-item index="1-4">JS注释</el-menu-item>
             <el-menu-item index="1-5">JS变量</el-menu-item>
+            <el-menu-item index="1-6">Js正则表达式</el-menu-item>
           </el-submenu>
           <el-submenu index="2">
             <template slot="title">JS表单</template>
@@ -59,20 +60,24 @@ import JsHtmlDom from './components/Js_Html_Dom'
 import JsDomCss from './components/Js_Dom_css'
 import JsAjax from './components/Js_Ajax'
 import JsDifficuty from './components/Js_Difficulty'
+import JsReg from './components/Js_Reg'
 export default {
   name: 'HTML',
   components: {
-    JsOutput, JsForm, JsFormApi, JsObjectMethods, JsObjPrototype, JsMethods, JsHtmlDom, JsDomCss, JsAjax, JsDifficuty
+    JsOutput, JsReg, JsForm, JsFormApi, JsObjectMethods, JsObjPrototype, JsMethods, JsHtmlDom, JsDomCss, JsAjax, JsDifficuty
   },
   data () {
     return {
-      activeIndex: '2-1',
-      currentComponent: 'JsForm'
+      activeIndex: '1-6',
+      currentComponent: 'JsReg'
     }
   },
   methods: {
     handleSelect (key) {
       switch (key) {
+        case '1-6':
+          this.currentComponent = 'JsReg'
+          break
         case '2-1':
           this.currentComponent = 'JsForm'
           break
