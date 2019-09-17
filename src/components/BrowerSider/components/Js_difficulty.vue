@@ -14,6 +14,9 @@
       <el-tab-pane label="JavaScript面向对象编程" lazy>
         <js-oo/>
       </el-tab-pane>
+      <el-tab-pane label="对象之间继承的5种方法">
+        <js-inheritance/>
+      </el-tab-pane>
     </el-tabs>
   </div>
 </template>
@@ -22,13 +25,15 @@ import JsRecycling from './Js_Recycling.vue'
 import ArrayMethods from './Array_methods'
 import JsTest from './Js_test'
 import JsOo from './Js_Oo'
+import JsInheritance from './Js_Inheritance'
 export default {
   name: 'JsDifficulty',
   components: {
     JsRecycling,
     ArrayMethods,
     JsTest,
-    JsOo
+    JsOo,
+    JsInheritance
   }
 }
 </script>
