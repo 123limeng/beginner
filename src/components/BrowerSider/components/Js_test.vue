@@ -33,8 +33,8 @@ export default {
     }
   },
   created () {
-    console.log('新数组' + this.handleArray([1, 3, 1, 5, 9, 0, 5, 9]))
-    console.log('新数组' + this.handleArrayOne([1, 3, 1, 5, 9, 0, 5, 9]))
+    console.log('去重后新数组' + this.handleArray([1, 3, 1, 5, 9, 0, 5, 9]))
+    console.log('去重后新数组' + this.handleArrayOne([1, 3, 1, 5, 9, 0, 5, 9]))
   },
   methods: {
     // 数组去重——遍历数组
