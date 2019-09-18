@@ -12,6 +12,7 @@
           <el-menu-item index="1">表单</el-menu-item>
           <el-menu-item index="2">走马灯</el-menu-item>
           <el-menu-item index="3">级联选择器</el-menu-item>
+          <el-menu-item index="4">穿梭框</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20">
@@ -24,10 +25,11 @@
 import MyForm from './components/MyForm.vue'
 import MyCarousel from './components/MyCarousel'
 import MyCascarder from './components/MyCascader'
+import MyTransfer from './components/MyTransfer'
 export default {
   name: 'MyElementUi',
   components: {
-    MyForm, MyCarousel, MyCascarder
+    MyForm, MyCarousel, MyCascarder, MyTransfer
   },
   data () {
     return {
@@ -46,6 +48,9 @@ export default {
           break
         case '3':
           this.currentComponent = 'MyCascarder'
+          break
+        case '4':
+          this.currentComponent = 'MyTransfer'
           break
         default:
           break
