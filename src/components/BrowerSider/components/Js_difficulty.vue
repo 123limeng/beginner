@@ -14,8 +14,11 @@
       <el-tab-pane label="JavaScript面向对象编程" lazy>
         <js-oo/>
       </el-tab-pane>
-      <el-tab-pane label="对象之间继承的5种方法">
+      <el-tab-pane label="对象之间继承的5种方法" lazy>
         <js-inheritance/>
+      </el-tab-pane>
+      <el-tab-pane label="跨域资源共享" lazy>
+        <my-cors/>
       </el-tab-pane>
     </el-tabs>
   </div>
@@ -26,6 +29,7 @@ import ArrayMethods from './Array_methods'
 import JsTest from './Js_test'
 import JsOo from './Js_Oo'
 import JsInheritance from './Js_Inheritance'
+import MyCors from './Cors'
 export default {
   name: 'JsDifficulty',
   components: {
@@ -33,7 +37,8 @@ export default {
     ArrayMethods,
     JsTest,
     JsOo,
-    JsInheritance
+    JsInheritance,
+    MyCors
   }
 }
 </script>
