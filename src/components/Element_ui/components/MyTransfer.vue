@@ -11,6 +11,9 @@
       <el-tab-pane label="可自定义的">
         <customize-transfer/>
       </el-tab-pane>
+      <el-tab-pane label="数据项属性别名">
+        <alias-transfer/>
+      </el-tab-pane>
     </el-tabs>
   </div>
 </template>
@@ -18,12 +21,14 @@
 import TypicalTransfer from './transfer/Typical_Transfer'
 import FilterableTransfer from './transfer/Filterable_Transfer'
 import CustomizeTransfer from './transfer/Customize_Transfer'
+import AliasTransfer from './transfer/Alias_Transfer'
 export default {
   name: 'MyTransfer',
   components: {
     TypicalTransfer,
     FilterableTransfer,
-    CustomizeTransfer
+    CustomizeTransfer,
+    AliasTransfer
   }
 }
 </script>
