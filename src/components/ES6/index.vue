@@ -10,6 +10,7 @@
           active-text-color="#ffd04b"
           @select="handleSelect">
           <el-menu-item index="1">ES6基础</el-menu-item>
+          <el-menu-item index="2">ES6难点</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20" style="background-color: #eee;">
@@ -20,10 +21,11 @@
 </template>
 <script>
 import Basics from './components/Basics'
+import AdvancedEs6 from './components/Advanced_Es6'
 export default {
   name: 'MyEs6',
   components: {
-    Basics
+    Basics, AdvancedEs6
   },
   data () {
     return {
@@ -36,6 +38,9 @@ export default {
       switch (key) {
         case '1':
           this.currentComponent = 'Basics'
+          break
+        case '2':
+          this.currentComponent = 'AdvancedEs6'
           break
         default:
           break
