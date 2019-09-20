@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-row>
+    <el-row :gutter="20">
       <el-col :span="4">
         <el-menu
           :default-active="activeIndex"
@@ -12,7 +12,7 @@
           <el-menu-item index="1">ES6基础</el-menu-item>
         </el-menu>
       </el-col>
-      <el-col :span="20">
+      <el-col :span="20" style="background-color: #eee;">
         <component :is="currentComponent"/>
       </el-col>
     </el-row>
