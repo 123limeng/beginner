@@ -10,8 +10,8 @@
     </div>
     <el-dialog :title="typeMap[type]" :visible.sync="dialogshow">
       <el-form label-width="100px" ref="form" :model="form" :rules="rules">
-        <el-form-item :label="typeMap[type] + '原因'" prop="age">
-          <el-input v-model="form.age"/>
+        <el-form-item :label="`${ typeMap[type] }原因`" prop="age">
+          <el-input v-model="form.age" :placeholder="`请输入${ typeMap[type] }原因`"/>
         </el-form-item>
       </el-form>
     </el-dialog>
