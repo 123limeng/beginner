@@ -193,7 +193,23 @@
       </ul>
     </div>
     <h4 class="textHover" @click="handlePosition">css position</h4>
-    <div v-show="positionShow">1</div>
+    <div v-show="positionShow">
+      <p>position属性的5个值：</p>
+      <ul>
+        <li>static：没有定位，遵循正常的文档流对象。静态定位的元素不会受到top/right/buttom/left属性的影响</li>
+        <li>fixed：元素位置相对于浏览器窗口是固定位置。即使窗口滚动它也不会移动。fixed定位使得元素位置与文档路无关，不占据空间，与其他元素重叠。</li>
+        <li>absolute：绝对定位元素的位置相对于最近的已定位的父元素，如果元素没有已定位的父元素，南无他的位置相对于html。
+          绝对定位的元素位置与文档流无关，因此不占据空间。绝对定位的元素与其他元素重叠。
+        </li>
+        <li>relative：相对于元素正常位置的定位。移动相对定位元素，但它原本所占据的空间不会改变。相对定位元素经常被用
+          来作为绝对定位元素的容器。
+        </li>
+        <li>sticky：粘性定位。基于用户的滚动位置来定位。元素定位的表现为在跨越特定阈值前为相对定位，
+          之后为固定定位。这个特定阈值为top/right/bottom/left之一。
+        </li>
+      </ul>
+      <p>重叠元素：z-index属性指定一个元素的重叠顺序。一个元素可以有整数或者负数的重叠顺序。</p>
+    </div>
   </div>
 </template>
 <script>
