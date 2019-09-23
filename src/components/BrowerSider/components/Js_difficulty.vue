@@ -20,6 +20,9 @@
       <el-tab-pane label="跨域资源共享" lazy>
         <my-cors/>
       </el-tab-pane>
+      <el-tab-pane label="导出文件">
+        <my-export/>
+      </el-tab-pane>
     </el-tabs>
   </div>
 </template>
@@ -30,6 +33,7 @@ import JsTest from './Js_test'
 import JsOo from './Js_Oo'
 import JsInheritance from './Js_Inheritance'
 import MyCors from './Cors'
+import MyExport from './My_Export'
 export default {
   name: 'JsDifficulty',
   components: {
@@ -38,7 +42,8 @@ export default {
     JsTest,
     JsOo,
     JsInheritance,
-    MyCors
+    MyCors,
+    MyExport
   }
 }
 </script>
