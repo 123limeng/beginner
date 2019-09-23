@@ -40,6 +40,8 @@
           <el-menu-item index="6">Ajax</el-menu-item>
           <el-menu-item index="7">Js 总结</el-menu-item>
           <el-menu-item index="8">JavaScript原型</el-menu-item>
+          <el-menu-item index="9">call()和apply()</el-menu-item>
+          <el-menu-item index="10">js专题</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20">
@@ -63,15 +65,17 @@ import JsAjax from './components/Js_Ajax'
 import JsDifficuty from './components/Js_Difficulty'
 import JsReg from './components/Js_Reg'
 import JsPrototype from './components/Js_Prototype'
+import JsCallApply from './components/Js_Call_Apply'
+import JsSpecial from './components/Js_special'
 export default {
   name: 'HTML',
   components: {
-    JsOutput, JsPrototype, JsReg, JsForm, JsFormApi, JsObjectMethods, JsObjPrototype, JsMethods, JsHtmlDom, JsDomCss, JsAjax, JsDifficuty
+    JsOutput, JsSpecial, JsCallApply, JsPrototype, JsReg, JsForm, JsFormApi, JsObjectMethods, JsObjPrototype, JsMethods, JsHtmlDom, JsDomCss, JsAjax, JsDifficuty
   },
   data () {
     return {
-      activeIndex: '1-6',
-      currentComponent: 'JsReg'
+      activeIndex: '10',
+      currentComponent: 'JsSpecial'
     }
   },
   methods: {
@@ -109,6 +113,12 @@ export default {
           break
         case '8':
           this.currentComponent = 'JsPrototype'
+          break
+        case '9':
+          this.currentComponent = 'JsCallApply'
+          break
+        case '10':
+          this.currentComponent = 'JsSpecial'
           break
         default:
           break
