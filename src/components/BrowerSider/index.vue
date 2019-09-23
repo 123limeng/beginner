@@ -39,6 +39,7 @@
           </el-submenu>
           <el-menu-item index="6">Ajax</el-menu-item>
           <el-menu-item index="7">Js 总结</el-menu-item>
+          <el-menu-item index="8">JavaScript原型</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20">
@@ -61,10 +62,11 @@ import JsDomCss from './components/Js_Dom_css'
 import JsAjax from './components/Js_Ajax'
 import JsDifficuty from './components/Js_Difficulty'
 import JsReg from './components/Js_Reg'
+import JsPrototype from './components/Js_Prototype'
 export default {
   name: 'HTML',
   components: {
-    JsOutput, JsReg, JsForm, JsFormApi, JsObjectMethods, JsObjPrototype, JsMethods, JsHtmlDom, JsDomCss, JsAjax, JsDifficuty
+    JsOutput, JsPrototype, JsReg, JsForm, JsFormApi, JsObjectMethods, JsObjPrototype, JsMethods, JsHtmlDom, JsDomCss, JsAjax, JsDifficuty
   },
   data () {
     return {
@@ -104,6 +106,9 @@ export default {
           break
         case '7':
           this.currentComponent = 'JsDifficuty'
+          break
+        case '8':
+          this.currentComponent = 'JsPrototype'
           break
         default:
           break
