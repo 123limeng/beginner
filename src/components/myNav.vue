@@ -18,6 +18,7 @@
       <el-menu-item index="8">Less</el-menu-item>
       <el-menu-item index="9">Element-UI</el-menu-item>
       <el-menu-item index="10">Lm-UI</el-menu-item>
+      <el-menu-item index="11">Data Structure</el-menu-item>
     </el-menu>
     <component :is="currentComponent"/>
   </div>
@@ -33,10 +34,11 @@ import MyEs6 from './ES6/index'
 import MyLess from './Less/index'
 import MyElementUi from './Element_ui/index'
 import LmUi from './Lm_ui/index'
+import DataStructure from './Data_structure'
 export default {
   name: 'MyNav',
   components: {
-    MyHTML, LmUi, BrowerSider, Bootstrap, MyNodeJs, MyVue, WebBuilding, MyEs6, MyLess, MyElementUi
+    MyHTML, DataStructure, LmUi, BrowerSider, Bootstrap, MyNodeJs, MyVue, WebBuilding, MyEs6, MyLess, MyElementUi
   },
   data () {
     return {
@@ -78,6 +80,9 @@ export default {
           break
         case '10':
           this.currentComponent = 'LmUi'
+          break
+        case '11':
+          this.currentComponent = 'DataStructure'
           break
         default:
           break
