@@ -210,6 +210,10 @@
       </ul>
       <p>重叠元素：z-index属性指定一个元素的重叠顺序。一个元素可以有整数或者负数的重叠顺序。</p>
     </div>
+    <h4 class="textHover" @click="handleFlexBox">css弹性盒子</h4>
+    <div v-show="flexBoxShow">
+      2
+    </div>
   </div>
 </template>
 <script>
@@ -236,7 +240,8 @@ export default {
       borderShow: false,
       marginShow: false,
       displayShow: false,
-      positionShow: true
+      positionShow: false,
+      flexBoxShow: true
     }
   },
   methods: {
@@ -269,7 +274,11 @@ export default {
     },
     handlePosition () {
       this.positionShow = !this.positionShow
+    },
+    handleFlexBox () {
+      this.flexBoxShow = !this.flexBoxShow
     }
+
   }
 }
 </script>
