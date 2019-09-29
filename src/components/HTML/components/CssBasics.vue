@@ -212,8 +212,46 @@
     </div>
     <h4 class="textHover" @click="handleFlexBox">css弹性盒子</h4>
     <div v-show="flexBoxShow">
-      2
+      <p>
+        弹性盒子由弹性容器和弹性子元素组成。
+      </p>
+      <p>
+        弹性容器通过设置display属性的值为flex或inline-flex将其定义为弹性容器。
+      </p>
+      <p>
+        弹性容器内包含一个或多个弹性子元素。
+        弹性容器外及弹性子元素内是正常渲染的，弹性盒子只定义了弹性子元素如何在弹性容器内布局。
+      </p>
+      <p>
+        弹性子元素通常在弹性盒子中一行显示，默认情况每个容器只有一行。
+      </p>
+      <p>
+        <strong>flex-direction的值有：</strong>
+      </p>
+      <ul>
+        <li>
+          row:横向从左到右排列，默认的排列方式。
+        </li>
+        <li>
+          row-reverse:反转横向排列。
+        </li>
+        <li>
+          column:纵向排列。
+        </li>
+        <li>
+          column-reverse:反转纵向排列。
+        </li>
+      </ul>
+      <p>
+        <strong>justify-content属性：</strong>在弹性容器上，把弹性项沿着弹性容器的主轴线对齐。
+      </p>
+      <p style="text-indent: 50px;">
+        justify-content语法如下：
+        justify-content: flex-start|flex-end|center|space-between|space-round;
+      </p>
+      <el-image :src="url"/>
     </div>
+    <el-backtop/>
   </div>
 </template>
 <script>
@@ -221,6 +259,7 @@ export default {
   name: 'CssBasics',
   data () {
     return {
+      url: require('./justify_content.png'),
       activeName: [
         'text_color',
         'text_align',
