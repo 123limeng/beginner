@@ -247,9 +247,37 @@
       </p>
       <p style="text-indent: 50px;">
         justify-content语法如下：
-        justify-content: flex-start|flex-end|center|space-between|space-round;
+        justify-content: flex-start|flex-end|center|space-between|space-around;
       </p>
       <el-image :src="url"/>
+      <p>
+        <strong>align-items属性：</strong>设置或检索弹性盒子元素在侧轴上的对齐方式
+      </p>
+      <p>
+        align-item: flex-start|flex-end|baseline|center|stretch;
+      </p>
+      <p>
+        <strong>flex-wrap属性：</strong>
+        用于指定弹性盒子的子元素的换行方式。
+      </p>
+      <ul>
+        <li>
+          nowrap: 默认弹性容器为单行，该情况下弹性子项可能会溢出容器。
+        </li>
+        <li>
+          wrap: 弹性容器为多行，该情况下弹性子项溢出的部分会被放置到新的一行，子项内部会发生断行。
+        </li>
+        <li>
+          wrap-reverse: 反转wrap排列
+        </li>
+      </ul>
+      <p>
+        <strong>align-content属性：</strong>
+        用于修改flex-wrap属性的行为，类似于align-items但他不是设置弹性子元素的对齐，而是设置各行的对齐。
+      </p>
+      <p>
+        align-content: flex-start|flex-end|center|space-between|space-around|stretch;
+      </p>
     </div>
     <el-backtop/>
   </div>
