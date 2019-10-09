@@ -42,6 +42,7 @@
           <el-menu-item index="8">JavaScript原型</el-menu-item>
           <el-menu-item index="9">call()和apply()</el-menu-item>
           <el-menu-item index="10">js专题</el-menu-item>
+          <el-menu-item index="11">JQuery</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20">
@@ -67,10 +68,11 @@ import JsReg from './components/Js_Reg'
 import JsPrototype from './components/Js_Prototype'
 import JsCallApply from './components/Js_Call_Apply'
 import JsSpecial from './components/Js_special'
+import JQuery from './components/jQuery'
 export default {
   name: 'HTML',
   components: {
-    JsOutput, JsSpecial, JsCallApply, JsPrototype, JsReg, JsForm, JsFormApi, JsObjectMethods, JsObjPrototype, JsMethods, JsHtmlDom, JsDomCss, JsAjax, JsDifficuty
+    JQuery, JsOutput, JsSpecial, JsCallApply, JsPrototype, JsReg, JsForm, JsFormApi, JsObjectMethods, JsObjPrototype, JsMethods, JsHtmlDom, JsDomCss, JsAjax, JsDifficuty
   },
   data () {
     return {
@@ -119,6 +121,9 @@ export default {
           break
         case '10':
           this.currentComponent = 'JsSpecial'
+          break
+        case '11':
+          this.currentComponent = 'JQuery'
           break
         default:
           break
