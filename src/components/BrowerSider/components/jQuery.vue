@@ -49,10 +49,13 @@
         <el-image :src="url2"/>
         <el-divider/>
         <h6>过滤选择器</h6>
+        <el-image :src="url3"/>
         <el-divider/>
         <h6>内容过滤选择器</h6>
+        <el-image :src="url4"/>
         <el-divider/>
         <h6>属性过滤选择器</h6>
+        <el-image :src="url5"/>
         <el-divider/>
         <h6>子元素过滤选择器</h6>
         <el-divider/>
@@ -61,7 +64,65 @@
         <h6>表单选择器</h6>
         <el-divider/>
         <h6>jQuery选择器完善的处理机制</h6>
+        <p>
+          当元素不存在时，JS不会保存阻塞其他代码的运行
+        </p>
         <el-divider/>
+      </el-tab-pane>
+      <el-tab-pane label="jQuery中的DOM操作">
+        <ol>
+          <li>
+            <h6>插入节点</h6>
+            <p>
+              append()：向每一个匹配的元素内部追加元素。$(A).append(B)：把B追加到A中
+            </p>
+            <p>
+              appendTo()：把所有匹配的元素追加到指定元素中。$(A).appendTo(B)：把A追加到B中。
+            </p>
+            <p>
+              prepend()：在被选元素的内部前面插入指定内容。
+            </p>
+            <p>
+              after()：在匹配的元素后面插入内容。$(A).after(B)：把B插入到A后面。
+            </p>
+            <p>
+              insertAfter()：把所有匹配的元素插入到指定的元素后面。$(A).insertAfter(B)：把A插入到B后面
+            </p>
+            <p>
+              before()：在每一个匹配元素前面插入内容。$(A).before(B)：把B插入到A前面
+            </p>
+            <p>
+              insertBefore()：把所有匹配元素插入到指定元素前面。$(A).insertBefore(B)：把A插入到B前面
+            </p>
+          </li>
+          <li>
+            <h6>删除节点</h6>
+            <p>
+              remove()：从DOM中删除所有匹配元素
+            </p>
+            <p>
+              detach()：与delete()一样，从DOM中去掉所有匹配元素，两者的区别是detach()
+              不会把匹配的元素从jQuery对象中删除，去掉的元素的所有的绑定的事件、附加的
+              数据等都会保留下来。
+            </p>
+            <p>
+              empty()：清空元素中所有的后代节点。<strong>注意是清空元素内的所有节点，并不清除选中元素。</strong>
+            </p>
+          </li>
+          <li>
+            <h6>复制节点</h6>
+            <p>
+              clone()：直接使用clone()方法复制的元素并不具有任何行为，如果需要新的元素也具有相同的行为，
+              需要在clone()方法中传入一个参数true
+            </p>
+          </li>
+          <li>
+            <h6>其他方法</h6>
+            <p>
+              replaceWith()：将所有匹配的元素替换成HTML或者DOM元素，绑定的事件将会消失。
+            </p>
+          </li>
+        </ol>
       </el-tab-pane>
     </el-tabs>
   </div>
@@ -72,7 +133,10 @@ export default {
   data () {
     return {
       url1: require('./Js_test_asset/jquery基础选择器.png'),
-      url2: require('./Js_test_asset/jquery层次选择器.png')
+      url2: require('./Js_test_asset/jquery层次选择器.png'),
+      url3: require('./Js_test_asset/过滤选择器.png'),
+      url4: require('./Js_test_asset/内容过滤选择器.png'),
+      url5: require('./Js_test_asset/属性过滤选择器.png')
     }
   }
 }
