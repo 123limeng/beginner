@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-row>
+    <el-row :gutter="20">
       <el-col :span="4">
         <el-menu
           :default-active="activeIndex"
@@ -13,6 +13,7 @@
           <el-menu-item index="2">注册</el-menu-item>
           <el-menu-item index="3">购物车</el-menu-item>
           <el-menu-item index="4">不同的dialog</el-menu-item>
+          <el-menu-item index="5">特效</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20">
@@ -26,10 +27,11 @@ import Login from './components/Login'
 import Register from './components/Register'
 import AddCart from './components/addCart'
 import DifferentDialog from './components/dialog'
+import ActiveSpecial from './components/activeSpecial'
 export default {
   name: 'WebBuilding',
   components: {
-    Login, Register, AddCart, DifferentDialog
+    Login, Register, AddCart, DifferentDialog, ActiveSpecial
   },
   data () {
     return {
@@ -51,6 +53,9 @@ export default {
           break
         case '4':
           this.currentComponent = 'DifferentDialog'
+          break
+        case '5':
+          this.currentComponent = 'ActiveSpecial'
           break
         default:
           break
