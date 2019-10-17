@@ -12,6 +12,7 @@
           <el-menu-item index="1">基础</el-menu-item>
           <el-menu-item index="2">进阶</el-menu-item>
           <el-menu-item index="3">vue-router</el-menu-item>
+          <el-menu-item index="4">Charts</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20">
@@ -26,10 +27,11 @@
 import Basics from './components/Basics'
 import MyProcess from './components/Process'
 import MyVueRouter from './components/MyVue_Router'
+import MyCharts from './components/Charts'
 export default {
   name: 'MyVue',
   components: {
-    Basics, MyProcess, MyVueRouter
+    Basics, MyProcess, MyVueRouter, MyCharts
   },
   data () {
     return {
@@ -48,6 +50,9 @@ export default {
           break
         case '3':
           this.currentComponent = 'MyVueRouter'
+          break
+        case '4':
+          this.currentComponent = 'MyCharts'
           break
         default:
           break
