@@ -16,6 +16,7 @@
           <el-menu-item index="5">评分</el-menu-item>
           <el-menu-item index="6">时间选择器</el-menu-item>
           <el-menu-item index="7">日期选择器</el-menu-item>
+          <el-menu-item index="8">步骤条</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20">
@@ -32,10 +33,11 @@ import MyTransfer from './components/MyTransfer'
 import MyRate from './components/MyRate'
 import MyTimePicker from './components/MyTimePicker'
 import MyDatePicker from './components/MyDatePicker'
+import MySteps from './components/MySteps'
 export default {
   name: 'MyElementUi',
   components: {
-    MyForm, MyCarousel, MyCascarder, MyTransfer, MyRate, MyTimePicker, MyDatePicker
+    MyForm, MySteps, MyCarousel, MyCascarder, MyTransfer, MyRate, MyTimePicker, MyDatePicker
   },
   data () {
     return {
@@ -66,6 +68,9 @@ export default {
           break
         case '7':
           this.currentComponent = 'MyDatePicker'
+          break
+        case '8':
+          this.currentComponent = 'MySteps'
           break
         default:
           break
