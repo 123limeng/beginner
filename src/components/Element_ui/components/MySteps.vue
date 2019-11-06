@@ -2,8 +2,8 @@
   <div>
     <h3>步骤条</h3>
     <el-divider/>
-    <el-steps :active="active" direction="vertical" space="300px" finish-status="success">
-      <el-step icon="el-icon-reading" title="阅读规则并同意" />
+    <el-steps :active="active" space="300px" finish-status="success">
+      <el-step icon="el-icon-reading" title="阅读规则" />
       <el-step icon="el-icon-edit" title="填写个人信息" />
       <el-step icon="el-icon-position" title="完成申请，等待审核" />
     </el-steps>
