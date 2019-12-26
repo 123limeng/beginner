@@ -2,7 +2,7 @@
   <div>
     <el-menu
       :default-active="activeIndex"
-      class="el-menu-demo position-menu"
+      class="el-menu-demo position-menu header-nav"
       mode="horizontal"
       background-color="#545c64"
       text-color="#fff"
@@ -20,7 +20,7 @@
       <el-menu-item index="10">Lm-UI</el-menu-item>
       <el-menu-item index="11">Data Structure</el-menu-item>
     </el-menu>
-    <component :is="currentComponent"/>
+    <component :is="currentComponent" class="main-content"/>
   </div>
 </template>
 <script>
@@ -91,3 +91,14 @@ export default {
   }
 }
 </script>
+<style scoped>
+.header-nav {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
+.main-content {
+  margin-top: 60px;
+}
+</style>
